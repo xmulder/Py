@@ -13,7 +13,7 @@ def adbDevices():
         strDevice=str(device)
         print(strDevice)
         try:
-            subprocess.check_output("adb -s" + " " + strDevice + " " + "shell am force-stop com.tencent.karaoke")
+            subprocess.check_output("adb -s" + " " + strDevice + " " + "shell am force-stop com.tencent.qqmusic")
             time.sleep(0.5)
             subprocess.check_output("adb -s"+" "+strDevice+" "+"shell input keyevent 26")
         except subprocess.CalledProcessError:
